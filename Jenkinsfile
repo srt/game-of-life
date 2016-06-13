@@ -2,7 +2,7 @@ node {
 
  stage 'Checkout'
 
- git url: 'https://github.com/srt/game-of-life.git'
+ checkout scm
 
  stage 'compile'
 
