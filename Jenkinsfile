@@ -7,11 +7,11 @@ node {
  stage 'compile'
 
  def mvnhome = tool 'M3'
- sh "${mvnhome}/bin/mvn -b compile"
+ sh "${mvnhome}/bin/mvn -B compile"
 
  stage 'test'
 
- sh "${mvnhome}/bin/mvn -b -Dmaven.test.failure.ignore verify"
+ sh "${mvnhome}/bin/mvn -B -Dmaven.test.failure.ignore verify"
 
  input message: "Does http://localhost:8888/staging/ look good?"
 
