@@ -16,7 +16,6 @@ node {
  input message: "Does http://localhost:8888/staging/ look good?"
 
         step([$class: 'ArtifactArchiver', artifacts: 'gameoflife-web/target/*.war'])
-        step([$class: 'WarningsPublisher', consoleParsers: [[parserName: 'Maven']]])
         step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
         step([$class: 'JavadocArchiver', javadocDir: 'gameoflife-core/target/site/apidocs/'])
         step([$class: 'hudson.plugins.checkstyle.CheckStylePublisher', pattern: '**/target/checkstyle-result.xml'])
