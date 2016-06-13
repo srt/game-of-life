@@ -11,7 +11,7 @@ node {
 
  stage 'test'
 
- sh "${mvnhome}/bin/mvn -b -Dmaven.test.failure.ignore test"
+ sh "${mvnhome}/bin/mvn -b -Dmaven.test.failure.ignore verify"
 
  input message: "Does http://localhost:8888/staging/ look good?"
 
