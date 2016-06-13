@@ -6,7 +6,7 @@ node {
 
  stage 'compile'
 
- def mvnhome = tool 'm3'
+ def mvnhome = tool 'M3'
  sh "${mvnhome}/bin/mvn -b compile"
 
  stage 'test'
